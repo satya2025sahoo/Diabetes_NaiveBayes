@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Orange and White Theme</title>
+	<style>
+		body {
+			background-color: #FFA500;
+		}
+		h1 {
+			color: #FFFFFF;
+			text-align: center;
+		}
+		p {
+			color: #FFFFFF;
+		}
+		input[type=text] {
+			background-color: #FFFFFF;
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			margin: 5px;
+			width: 100%;
+		}
+		button[type=submit] {
+			background-color: #FFFFFF;
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			margin: 5px;
+			width: 100%;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+ <div class="login">
+	<h1>Diabetes Prediction</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /><br>
+    	<input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
+        <input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" /><br>
+        <input type="text" name="SkinThickness" placeholder="SkinThickness" required="required" /><br>
+        <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
+        <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+        <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required="required" /><br>
+        <input type="text" name="Age" placeholder="Age" required="required" /><br>
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+<body>
+
+   <br>
+   <br>
+
+
+ </div>
+ {{result}}
+
+</body>
+</html>
