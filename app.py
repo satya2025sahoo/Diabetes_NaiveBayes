@@ -7,8 +7,8 @@ from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
 
-scaler=joblib.load('scaler.pkl')
-model=joblib.load('gmodel1.pkl')
+scaler=joblib.load('/config/workspace/Model/standardScalar.pkl')
+model=joblib.load('/config/workspace/Model/gmodel_BNB.pkl')
 
 @app.route("/")
 def index():
